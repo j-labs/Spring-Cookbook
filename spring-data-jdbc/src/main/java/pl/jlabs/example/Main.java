@@ -23,10 +23,7 @@ public class Main {
 
     private static void insertCompany(CompanyRepository companyRepository) {
         companyRepository.deleteAll();
-
-        var jlabs = new Company();
-        jlabs.setCompanyName("J-Labs");
-        companyRepository.save(jlabs);
+        companyRepository.save(new Company("J-Labs"));
     }
 
     private static void insertAndDeleteUsers(UserRepository userRepository, CompanyRepository companyRepository) {

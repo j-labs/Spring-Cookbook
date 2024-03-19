@@ -4,9 +4,9 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 
 @Getter
-@NoArgsConstructor
 @RequiredArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Company {
     @Id private Integer id;
-    @Setter @NonNull private String companyName;
+    @NonNull private String companyName;
 }
